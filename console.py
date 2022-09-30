@@ -1,30 +1,23 @@
 #!/usr/bin/python3
-"""Module 8-rectangle
-Creating class Rectangle that inherits from
-BaseGeometry(8-base_geometry.py)
-"""
+"""Holberton AirBnb Project for Holberton (Console)"""
+import cmd
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+class HBNBCommand(cmd.Cmd):
+	"""Class for Console Commands"""
+	promt = '(hbnb) '
 
+	def do_quit(self, arg):
+		"""Quit command to exit the program"""
+		return True
 
-class Rectangle(BaseGeometry):
-    """Creates class Gemoetry"""
+	def do_EOF(self, arg):
+		"""exits the command line at the end of file"""
+		return True
 
-    def __init__(self, width, height):
-        """Initializes Rectangle class"""
+		def emptyline(self):
+			"""Does nothing when empty line is entered as input"""
+			pass
 
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        """Return the area of the rectangle."""
-
-        return self.__width * self.__height
-
-    def __str__(self):
-        """Returns a formatted string."""
-
-        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
+	if __name__ == '__main__':
+		HBNBCommand().cmdloop()
