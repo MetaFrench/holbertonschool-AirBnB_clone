@@ -20,8 +20,8 @@ class BaseModel:
 
     def to_dict(self):
         """returns a dict containing the instance attributes"""
-        self.__dict__['class'] = self.__class__
-        self.created_at.isoformat()
-        self.updated_at.isoformat()
+        self.__dict__['__class__'] = type(self).__name__
+        self.created_at = self.created_at.isoformat()
+        self.updated_at = self.updated_at.isoformat()
         return self.__dict__
 
