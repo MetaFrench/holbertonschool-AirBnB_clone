@@ -2,7 +2,7 @@
 """has a class FileStorage that sFileStorage"""
 import json
 from models.base_model import BaseModel
-
+from models.user import User
 
 class FileStorage:
     """FileStorage"""
