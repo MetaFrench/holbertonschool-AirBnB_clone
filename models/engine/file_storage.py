@@ -30,10 +30,11 @@ class FileStorage:
         """deserializes the json file into __objects dict"""
         try:
             with open(FileStorage.__file_path, encoding='utf-8') as f:
-                all_objs = (json.loads(f.read()))
-                for obj_id in all_objs.keys():
-                    obj = all_objs[obj_id]
-                    cls_name = obj['__class__']
-                    self.new(eval(cls_name)(**obj))
-        except Exception:
+                all_objs = json.loads(f.read())
+                for key, value in all_objs.items():
+                    FileStorage.__objects[key] = \
+                        eval(value['__class__'])(**value)
+        except FileNotFoundError:
+            pass
+        except json.decoder.JSONDecodeError:
             pass
