@@ -74,7 +74,8 @@ class HBNBCommand(cmd.Cmd):
             print(models.storage._FileStorage__objects[args[0]+'.'+args[1]])
 
     def do_destroy(self, arg):
-        """Destroy command to delete an instance"""
+        """Destroy command to delete an instance
+        Command to destroy"""
         """
         method that deletes an instance of a class
         based on the class name and id and saves the change into the JSON file
