@@ -26,6 +26,7 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """
     class that defines the "entry point of the command interpreter"
+    Command interpreter entrty point
     """
 
     prompt = '(hbnb) '
