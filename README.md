@@ -14,8 +14,8 @@ This storage engine will give us and abstraction between "My object" and "How th
 use the following command to start the console: ./console/py
 
 #How its used:
-+ manage objects via console/command interprete
-+ store and persist object to a file (JSON file)
++ Manage objects via console/command interprete
++ Store and persist object to a file (JSON file)
 + Commands: create, show, destory, all, update, help, quit
 
 #How to open:
