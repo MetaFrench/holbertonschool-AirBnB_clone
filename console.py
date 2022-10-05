@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """
-console.py module
+console.py module tp run airbnb console
 """
 import cmd
+from codeop import CommandCompiler
+from multiprocessing.context import SpawnContext
 import shlex
 import ast
+from tkinter import COMMAND
+from unittest.main import MAIN_EXAMPLES
 import models
 from models.base_model import BaseModel
 # Note: no need to import FileStorage if __objects is called
@@ -263,6 +267,6 @@ class HBNBCommand(cmd.Cmd):
         the emptyline method as shown below
         """
         pass
-
+    
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
